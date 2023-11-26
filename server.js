@@ -7,7 +7,7 @@ const webSocketServer = new WebSocket.Server({ port: PORT });
 let clients = new Map();
 
 webSocketServer.on('connection', (ws, req) => {
-    const clientIp = req.connection.remoteAddress;
+    const clientIp = "ip";
 
     console.log(`Client connected: ${clientIp}`);
     clients.set(clientIp, ws);
